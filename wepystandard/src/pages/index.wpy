@@ -15,6 +15,7 @@
     color: #aaa;
   }
   .container{
+    // display: none;
     margin:0 20px;
   }
   .show_header{
@@ -61,7 +62,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .DZ{width:15px;height:15px;vertical-align: middle;margin:0 10px;}
+  .DZ{width:15px;height:15px;vertical-align: middle;margin-right:10px;}
+  .noshow{
+    display:none;
+  }
 </style>
 <template>
 <!-- <view></view> -->
@@ -78,16 +82,16 @@
       </view>
     </view>
     <view>
-      <!-- 广东省汕头市潮南区峡山街道广祥二街广美路118-120号比特科技 -->
-        <!-- <navigator  class='inline fs14' open-type='navigate' url='./maps'><image class='DZ' src='../image/DZ.png'/>sss</navigator> -->
+        <navigator class='noshow'   open-type='navigate' url='./maps'>跳转</navigator>
         <view class='inline fs14' @tap='add()'><image class='DZ' src='../image/DZ.png'/>广东省汕头市潮南区峡山街道广祥二街广美路118-120号比特科技</view>
         <view class='inline fs14'><image class='DZ' src='../image/SH.png'/>早上9点半-晚上9点半</view>
         <view class='inline fs14' @tap='tel(13542855108)'><image class='DZ' src='../image/DH.png'/>13542855108</view>
         <view class='inline fs14' @tap='tel(13539638641)'><image class='DZ' src='../image/DH.png'/>13539638641</view>
         <view class='inline fs14'><image class='DZ' src='../image/ZP.png'/>门店图片</view>
     </view>
-  
   </view>
+  <!-- <view @tap='Sweep_code()'>扫码</view>
+  <view @tap='cards()'>卡券</view> -->
 </template>
 
 <script>
@@ -95,7 +99,8 @@
 
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: 'test'
+      navigationBarTitleText: '比特科技'
+      //  navigationBarTitleText: '辣么值商城'
     }
     components = {
     }
@@ -107,13 +112,10 @@
       longitude: 116.41,
     }
 
-    computed = {
-      now () {
-        return +new Date()
-      }
+    computed = { // 计算属性
     }
 
-    methods = {
+    methods = { // 方法
       add () {
         var that = this;
         wx.openLocation({
@@ -139,6 +141,29 @@
         wx.makePhoneCall({
           phoneNumber:phomeNum
         })
+      },
+      Sweep_code () {
+        wx.scanCode({ // 扫码功能
+            success: (res) =>{
+              console.log(res);
+            }
+        })
+      },
+      cards () {
+        // wx.addCard({
+        //   cardList: [
+        //     {
+        //       cardId: '',
+        //       cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
+        //     }, {
+        //       cardId: '',
+        //       cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
+        //     }
+        //   ],
+        //   success: function(res) {
+        //     console.log(res.cardList) // 卡券添加结果
+        //   }
+        // })
       }
     }
 
@@ -149,7 +174,7 @@
       }
     }
 
-    onLoad() {
+    onLoad() { 
       let self = this
       this.$parent.getUserInfo(function (userInfo) {
         if (userInfo) {
