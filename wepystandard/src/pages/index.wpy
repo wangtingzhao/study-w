@@ -15,7 +15,7 @@
     color: #aaa;
   }
   .container{
-    // display: none;
+    display: none;
     margin:0 20px;
   }
   .show_header{
@@ -89,20 +89,21 @@
         <view class='inline fs14' @tap='tel(13539638641)'><image class='DZ' src='../image/DH.png'/>13539638641</view>
         <view class='inline fs14'><image class='DZ' src='../image/ZP.png'/>门店图片</view>
     </view>
+    
   </view>
-  <!-- <view @tap='Sweep_code()'>扫码</view>
-  <view @tap='cards()'>卡券</view> -->
+  <Thome/>
 </template>
 
 <script>
   import wepy from 'wepy'
-
+  import Thome from '../components/Thome'
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: '比特科技'
-      //  navigationBarTitleText: '辣么值商城'
+      // navigationBarTitleText: '比特科技'
+       navigationBarTitleText: '辣么值商城'
     }
     components = {
+      Thome: Thome
     }
 
     mixins = []

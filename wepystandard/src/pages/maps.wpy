@@ -4,14 +4,14 @@
 }
 </style>
 <template>
-    <map class='maps'></map>
+
 </template>
 <script>
   import wepy from 'wepy'
 
   export default class Maps extends wepy.page {
       config = {
-        navigationBarTitleText: 'test'
+        navigationBarTitleText: '辣么值商城'
       }
       components = {
       }

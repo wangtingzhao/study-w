@@ -1,0 +1,29 @@
+<style lang="less">
+.header{
+    width:100px;
+}
+</style>
+
+<template>
+    <view class='Thome'>
+        <view class='header'>
+            <view class='logo_bg_img'>
+                <image src="../image/bite.jpg"></image>
+            </view>
+        </view>
+    </viwe>
+</template>
+
+<script>
+    import wepy from 'wepy'
+    
+    export default class Thome extends wepy.component {
+        config = {
+            navigationBarTitleText:'首页'
+        }
+
+        data = {
+
+        }
+    }
+</script>
