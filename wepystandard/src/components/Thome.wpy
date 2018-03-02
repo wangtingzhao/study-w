@@ -1,29 +1,103 @@
-<style lang="less">
-.header{
-    width:100px;
-}
+<style lang='css'>
+    .Theader{
+        width:100%;
+        height:150px;
+        background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520009206543&di=9eacb8af3130c3595e16c00a2c8044dd&imgtype=0&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0729%2Fd29c2e05752b67ef949af961f55575c2.jpg) no-repeat ;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+    .logo{
+        width: 60px;
+        height:60px;
+        border-radius: 50%;
+        margin:20px auto 0;
+        display: block;
+        
+    }
+    .p{
+        line-height:1.5;
+        height:20px;
+        margin:5px 0;
+    }
+    .text{text-align: center;}
+    .colorF{color: #fff;}
+    .fs12{font-size: 12px;}
+    .fs14{font-size: 13px;}
+    .Atab{ 
+        height: 80px;
+        display: flex;
+        border-bottom:5px solid #e5e5e5;
+     }
+    .com_tab{
+        flex: 1;
+        border-right:1px solid #e5e5e5;
+    }
+    .com_tab:nth-child(4){ border:0;}
+    .com_tab image{
+        width: 30px;
+        height:30px;
+        display: block;
+        margin: 10px auto;
+    }
+    .title{
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        /* font-weight:600; */
+        color:#333;
+        border:1px solid #e5e5e5;
+        /* text-indent: 10px; */
+    }
+    .icon_store,.icon_ppt,.icon_coll{
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        margin: 0 10px;
+    }
+    /* .icon_store{
+        background: url(../image/store.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon_ppt{
+        background: url(../image/ppts.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .icon_coll{
+        background: url(../image/coll.png) no-repeat;
+        background-size: 100% 100%;
+    } */
 </style>
-
 <template>
-    <view class='Thome'>
-        <view class='header'>
-            <view class='logo_bg_img'>
-                <image src="../image/bite.jpg"></image>
-            </view>
-        </view>
-    </viwe>
+  <view class='Thome'>
+      <view class='Theader'>
+          <image class='logo' src="../image/bite.jpg"></image>
+          <view class='p text colorF'>比特科技</view>
+          <view class='p text colorF fs12'>电脑 闭路 笔记本 网络 打印机</view>
+      </view>
+      <view  class='Atab'>
+          <view class='com_tab'><image src="../image/server.png"></image><view class='p text fs14'>服务流程</view></view>
+          <view class='com_tab'><image src="../image/ppt.png"></image><view class='p text fs14'>案例展示</view></view>
+          <view class='com_tab'><image src="../image/order.png"></image><view class='p text fs14'>下单定制</view></view>
+          <view class='com_tab'><image src="../image/my.png"></image><view class='p text fs14'>关于我们</view></view>
+      </view>
+      <view class='store'>
+          <view class='title'> <image class='icon_store'  src="../image/store.png"></image> 实体店</view>
+      </view>
+      <view class='ppt'>
+          <view class='title'> <image class='icon_ppt'  src="../image/ppts.png"></image> 公司案例</view>
+      </view>
+      <view class='Collaborator'>
+          <view class='title'> <image class='icon_coll'  src="../image/coll.png"></image> 合作供应商</view>
+      </view>
+  </view>
 </template>
-
 <script>
     import wepy from 'wepy'
-    
-    export default class Thome extends wepy.component {
+    export default class Thome extends wepy.component  {
         config = {
-            navigationBarTitleText:'首页'
-        }
-
-        data = {
-
+            
         }
     }
 </script>
