@@ -1,0 +1,16 @@
+<template>
+  <view class='Tabout'>关于我们</view>
+</template>
+
+<script>
+import wepy from 'wpey'
+export default class Tabout extends wepy.component{
+    config = {
+
+    }
+}
+</script>
+
+<style>
+
+</style>

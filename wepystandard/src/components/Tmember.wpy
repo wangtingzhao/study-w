@@ -1,0 +1,16 @@
+<template>
+  
+</template>
+
+<script>
+import wepy from 'wepy'
+export default class Tmember extends wepy.component {
+    config = {
+        
+    }
+}
+</script>
+
+<style>
+
+</style>

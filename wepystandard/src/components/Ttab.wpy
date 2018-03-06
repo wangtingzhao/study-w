@@ -1,0 +1,78 @@
+<style>
+.Tabhref{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+ .Ttabcom{
+    flex: 1;
+ }
+ .iocn_home{
+   width: 20px;
+   height: 20px;
+   margin: 5px auto;
+   display: block;
+   /* background: url(../image/homeT.png) no-repeat;
+   background-size: 100% 100%; */
+ }
+ .Ttab_title{
+   font-size: 14px;
+   text-align: center;
+ }
+</style>
+
+<template>
+    <view class='Tabhref'>
+      <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
+          <image src='../image/homeT.png' class='iocn_home'/>
+          <view class='Ttab_title'>首页</view>
+      </navigator>
+      <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
+        <image src='../image/lookF.png' class='iocn_home'/>
+        <view class='Ttab_title'>咨询</view>
+      </navigator>
+      <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
+        <image src='../image/wF.png' class='iocn_home'/>
+        <view class='Ttab_title'>关于</view>
+      </navigator>
+      <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
+        <image src='../image/meF.png' class='iocn_home'/>
+        <view class='Ttab_title'>我</view>
+      </navigator>
+        <!-- <view class='Ttabcom'>
+            <navigator open-type='navigate' >
+              <image src='../image/homeT.png' class='iocn_home'/>
+              <view class='Ttab_title'>首页</view>
+            </navigator >
+        </view>
+        <view class='Ttabcom'>
+            <navigator open-type='navigate' >
+              <image src='../image/homeT.png' class='iocn_home'/>
+              <view class='Ttab_title'>首页</view>
+            </navigator >
+        </view> -->
+        <!-- <navigator open-type='navigate'  class='Ttabcom'>
+          <image src='../image/lookF.png' class='iocn_home'/>
+          <view class='Ttab_title'>咨询</view>
+        </navigator >
+        <navigator open-type='navigate'  class='Ttabcom'>
+          <image src='../image/wF.png' class='iocn_home'/>
+          <view class='Ttab_title'>关于</view>
+        </navigator >
+        <navigator open-type='navigate'   class='Ttabcom'>
+          <image src='../image/meF.png' class='iocn_home'/>
+          <view class='Ttab_title'>我</view>
+        </navigator > -->
+    </view>
+</template>
+<script>
+    import wepy from 'wepy'
+    export default class Ttab extends wepy.component{
+        config = {
+
+        }
+    }
+</script>

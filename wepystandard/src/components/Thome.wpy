@@ -12,7 +12,6 @@
         border-radius: 50%;
         margin:20px auto 0;
         display: block;
-        
     }
     .p{
         line-height:1.5;
@@ -92,12 +91,17 @@
           <view class='title'> <image class='icon_coll'  src="../image/coll.png"></image> 合作供应商</view>
       </view>
   </view>
+  <Ttab/>
 </template>
 <script>
     import wepy from 'wepy'
+    import Ttab from './Ttab'
     export default class Thome extends wepy.component  {
         config = {
             
+        }
+        components = {
+            Ttab: Ttab
         }
     }
 </script>

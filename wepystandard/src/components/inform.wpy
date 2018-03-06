@@ -1,0 +1,16 @@
+<template>
+  <view class='Tinfrom'>资讯</view>
+</template>
+
+<script>
+import wepy from 'wepy' 
+export default class Tinfrom extends wepy.component {
+    confog = {
+
+    }
+}
+</script>
+
+<style>
+
+</style>
