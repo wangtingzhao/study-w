@@ -91,17 +91,19 @@
           <view class='title'> <image class='icon_coll'  src="../image/coll.png"></image> 合作供应商</view>
       </view>
   </view>
-  <Ttab/>
+
 </template>
 <script>
     import wepy from 'wepy'
-    import Ttab from './Ttab'
+
     export default class Thome extends wepy.component  {
         config = {
             
         }
-        components = {
-            Ttab: Ttab
+        data = {
         }
+        components = {
+        }
+        
     }
 </script>

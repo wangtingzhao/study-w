@@ -92,18 +92,21 @@
     
   </view>
   <Thome/>
+    <Ttab :active.sync='currentTab'/>
 </template>
 
 <script>
   import wepy from 'wepy'
   import Thome from '../components/Thome'
+  import Ttab from '../components/Ttab'
   export default class Index extends wepy.page {
     config = {
-      // navigationBarTitleText: '比特科技'
-       navigationBarTitleText: '辣么值商城'
+      navigationBarTitleText: '比特科技'
+      //  navigationBarTitleText: '辣么值商城'
     }
     components = {
-      Thome: Thome
+      Thome: Thome,
+      Ttab: Ttab
     }
 
     mixins = []
@@ -111,6 +114,7 @@
     data = {
       latitude: 23.25543,
       longitude: 116.41,
+      currentTab: 0
     }
 
     computed = { // 计算属性
@@ -182,6 +186,9 @@
           self.userInfo = userInfo
         }
       })
+    }
+    onShow () {
+        this.currentTab = 0;
     }
   }
 </script>

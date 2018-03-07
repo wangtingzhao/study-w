@@ -26,7 +26,7 @@
 
 <template>
     <view class='Tabhref'>
-      <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
+      <!-- <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
           <image src='../image/homeT.png' class='iocn_home'/>
           <view class='Ttab_title'>首页</view>
       </navigator>
@@ -41,38 +41,40 @@
       <navigator class='Ttabcom'   open-type='navigate' url='./maps'>
         <image src='../image/meF.png' class='iocn_home'/>
         <view class='Ttab_title'>我</view>
-      </navigator>
-        <!-- <view class='Ttabcom'>
-            <navigator open-type='navigate' >
-              <image src='../image/homeT.png' class='iocn_home'/>
+      </navigator> -->
+        <view class='Ttabcom' @tap='chang(0)'  >
+              <image src="../image/{{active == 0 ? 'homeT' : 'homeF' }}.png" class='iocn_home'/>
               <view class='Ttab_title'>首页</view>
-            </navigator >
         </view>
-        <view class='Ttabcom'>
-            <navigator open-type='navigate' >
-              <image src='../image/homeT.png' class='iocn_home'/>
-              <view class='Ttab_title'>首页</view>
-            </navigator >
-        </view> -->
-        <!-- <navigator open-type='navigate'  class='Ttabcom'>
-          <image src='../image/lookF.png' class='iocn_home'/>
+        <view class='Ttabcom' @tap='chang(1)' >
+          <image src="../image/{{active == 1 ? 'lookT' : 'lookF'}}.png" class='iocn_home'/>
           <view class='Ttab_title'>咨询</view>
-        </navigator >
-        <navigator open-type='navigate'  class='Ttabcom'>
-          <image src='../image/wF.png' class='iocn_home'/>
+        </view>
+         <view class='Ttabcom' @tap='chang(2)' >
+          <image src="../image/{{active == 2 ? 'wT' : 'wF'}}.png" class='iocn_home'/>
           <view class='Ttab_title'>关于</view>
-        </navigator >
-        <navigator open-type='navigate'   class='Ttabcom'>
-          <image src='../image/meF.png' class='iocn_home'/>
+        </view>
+          <view class='Ttabcom' @tap='chang(3)' >
+          <image src="../image/{{active == 3 ? 'meT' : 'meF'}}.png" class='iocn_home'/>
           <view class='Ttab_title'>我</view>
-        </navigator > -->
+        </view>
     </view>
 </template>
 <script>
     import wepy from 'wepy'
     export default class Ttab extends wepy.component{
-        config = {
-
+        props = {
+          active: {
+            twoWay: true
+          }
+        }
+        methods = {
+          chang (idx, evt) {
+              this.active = +idx;
+          }
+        }
+        onLoad () {
+          console.log(this.active);
         }
     }
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import wepy from 'wpey'
+import wepy from 'wepy'
 export default class Tabout extends wepy.component{
     config = {
 
