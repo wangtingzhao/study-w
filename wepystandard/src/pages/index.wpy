@@ -91,13 +91,19 @@
     </view>
     
   </view>
-  <Thome/>
+    <Thome hidden='{{currentTab != 0}}'/>
+    <inform hidden='{{currentTab != 1}}'/>
+    <Tabout hidden='{{currentTab != 2}}'/>
+    <Tmember hidden='{{currentTab != 3}}'/>
     <Ttab :active.sync='currentTab'/>
 </template>
 
 <script>
   import wepy from 'wepy'
   import Thome from '../components/Thome'
+  import Tabout from '../components/Tabout'
+  import Tmember from '../components/Tmember'
+  import inform from '../components/inform'
   import Ttab from '../components/Ttab'
   export default class Index extends wepy.page {
     config = {
@@ -106,7 +112,10 @@
     }
     components = {
       Thome: Thome,
-      Ttab: Ttab
+      Tabout: Tabout,
+      inform: inform,
+      Tmember: Tmember,
+      Ttab: Ttab,
     }
 
     mixins = []
@@ -181,11 +190,13 @@
 
     onLoad() { 
       let self = this
-      this.$parent.getUserInfo(function (userInfo) {
-        if (userInfo) {
-          self.userInfo = userInfo
-        }
-      })
+      // console.log(this.$paren)
+      // this.$parent.getUserInfo(function (userInfo) {
+      //   if (userInfo) {
+      //     console.log(userInfo);
+      //     self.userInfo = userInfo
+      //   }
+      // })
     }
     onShow () {
         this.currentTab = 0;

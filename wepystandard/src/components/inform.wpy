@@ -1,10 +1,10 @@
 <template>
-  <view class='Tinfrom'>资讯</view>
+  <view class='Tinform'>资讯</view>
 </template>
 
 <script>
 import wepy from 'wepy' 
-export default class Tinfrom extends wepy.component {
+export default class Tinform extends wepy.component {
     confog = {
 
     }

@@ -1,5 +1,46 @@
+<style>
+    .member_user{
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
+    }
+    .user_bg{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .user_block {
+        position: absolute;
+        height: 100px;
+        top:0;left:0;
+        bottom:0;right:0;
+        margin: auto 0;
+    }
+    .user_img{
+        width: 60px;
+        height: 60px;
+        display: block;
+        float: left;
+        margin:20px;
+        border-radius: 50%;
+    }
+    .user_name{
+        float: left;
+        line-height: 100px;
+    }
+</style>
 <template>
-  
+    <view class='Tmember'>
+        <view class='member_user'>
+            <image  class='user_bg' src="../image/user_bg.png"></image>
+            <view class='user_block'>
+                <image class='user_img' src="{{ userInfo.avatarUrl }}"></image>
+                <view class='user_name'>{{ userInfo.nickName }}</view>
+            </view>
+            
+        </view>
+    </view>
 </template>
 
 <script>
@@ -8,9 +49,21 @@ export default class Tmember extends wepy.component {
     config = {
         
     }
+    data = {
+        userInfo:{
+            nickName:'加载中...',
+            avatarUrl:'../image/bite.jpg'
+        }
+    }
+    onLoad () {
+        var slef = this;
+        this.$parent.$parent.getUserInfo(function (userInfo) {
+            console.log(userInfo);
+                slef.userInfo = userInfo;
+                console.log(slef.userInfo);
+        });
+    }
 }
 </script>
 
-<style>
 
-</style>
