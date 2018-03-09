@@ -1,4 +1,7 @@
 <style>
+    .Tmember{
+        padding-bottom:50px;
+    }
     .member_user{
         width: 100%;
         height: 100px;
@@ -29,6 +32,13 @@
         float: left;
         line-height: 100px;
     }
+    .list_com{
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        border-bottom:1px solid #e5e5e5;
+    }
+    .list_com:last-child{border:0;}
 </style>
 <template>
     <view class='Tmember'>
@@ -38,7 +48,16 @@
                 <image class='user_img' src="{{ userInfo.avatarUrl }}"></image>
                 <view class='user_name'>{{ userInfo.nickName }}</view>
             </view>
-            
+        </view>
+        <view class='href_list'>
+            <navigator class='list_com' url="">我的订单</navigator>
+            <navigator class='list_com' url="">地址管理</navigator>
+            <navigator class='list_com' url="">购物车</navigator>
+            <navigator class='list_com' url="">系统通知</navigator>
+            <navigator class='list_com' url="">会员卡</navigator>
+            <navigator class='list_com' url="">优惠券</navigator>
+            <navigator class='list_com' url="">积分</navigator>
+            <navigator class='list_com' url="">中奖纪录</navigator>
         </view>
     </view>
 </template>
@@ -51,17 +70,21 @@ export default class Tmember extends wepy.component {
     }
     data = {
         userInfo:{
-            nickName:'加载中...',
-            avatarUrl:'../image/bite.jpg'
+            nickName:'加载中。。'
         }
     }
     onLoad () {
+        // console.log(1);
         var slef = this;
+        
         this.$parent.$parent.getUserInfo(function (userInfo) {
-            console.log(userInfo);
-                slef.userInfo = userInfo;
-                console.log(slef.userInfo);
+                if(userInfo){
+                    slef.userInfo = userInfo;
+                     console.log(slef.userInfo);
+                }
+                slef.$apply();
         });
+                 console.log(slef.userInfo);
     }
 }
 </script>

@@ -91,6 +91,7 @@
     </view>
     
   </view>
+  <!-- <view>{{userInfo.nickName}}</view> -->
     <Thome hidden='{{currentTab != 0}}'/>
     <inform hidden='{{currentTab != 1}}'/>
     <Tabout hidden='{{currentTab != 2}}'/>
@@ -107,8 +108,8 @@
   import Ttab from '../components/Ttab'
   export default class Index extends wepy.page {
     config = {
-      navigationBarTitleText: '比特科技'
-      //  navigationBarTitleText: '辣么值商城'
+      // navigationBarTitleText: '比特科技'
+       navigationBarTitleText: '辣么值商城'
     }
     components = {
       Thome: Thome,
@@ -123,7 +124,8 @@
     data = {
       latitude: 23.25543,
       longitude: 116.41,
-      currentTab: 0
+      currentTab: 0,
+      userInfo:{}
     }
 
     computed = { // 计算属性
@@ -141,7 +143,6 @@
         });
        
         // wx.getLocation({ // 获取定位
-
         //   type: 'wgs84',
         //   success: function(res) {
         //      that.latitude = res.latitude // 23.25543
@@ -181,12 +182,6 @@
       }
     }
 
-    events = {
-      'index-emit': (...args) => {
-        let $event = args[args.length - 1]
-        console.log(`${this.$name} receive ${$event.name} from ${$event.source.$name}`)
-      }
-    }
 
     onLoad() { 
       let self = this
@@ -197,6 +192,7 @@
       //     self.userInfo = userInfo
       //   }
       // })
+      // console.log(self);
     }
     onShow () {
         this.currentTab = 0;
