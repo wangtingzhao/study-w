@@ -1,0 +1,24 @@
+<!-- home.wxml -->
+<view class='Thome'>
+    <view class='Theader'>
+        <image class='logo' src="../../image/bite.jpg"></image>
+        <view class='p text colorF'>比特科技</view>
+        <view class='p text colorF fs12'>电脑 闭路 笔记本 网络 打印机</view>
+    </view>
+    <view  class='Atab'>
+        <view class='com_tab'><image src="../../image/server.png"></image><view class='p text fs14'>服务流程</view></view>
+        <view class='com_tab'><image src="../../image/ppt.png"></image><view class='p text fs14'>案例展示</view></view>
+        <view class='com_tab'><image src="../../image/order.png"></image><view class='p text fs14'>下单定制</view></view>
+        <view class='com_tab'><image src="../../image/my.png"></image><view class='p text fs14'>关于我们</view></view>
+    </view>
+    <view class='store'>
+        <view class='title'> <image class='icon_store'  src="../../image/store.png"></image> 实体店</view>
+    </view>
+    <view class='ppt'>
+        <view class='title'> <image class='icon_ppt'  src="../../image/ppts.png"></image> 公司案例</view>
+    </view>
+    <view class='Collaborator'>
+        <view class='title'> <image class='icon_coll'  src="../../image/coll.png"></image> 合作供应商</view>
+    </view>
+    <tab></tab>
+</view>

@@ -1,0 +1,42 @@
+.Tmember{
+    padding-bottom:50px;
+}
+.member_user{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.user_bg{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.user_block {
+    position: absolute;
+    height: 100px;
+    top:0;left:0;
+    bottom:0;right:0;
+    margin: auto 0;
+}
+.user_img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    float: left;
+    margin:20px;
+    border-radius: 50%;
+}
+.user_name{
+    float: left;
+    line-height: 100px;
+}
+.list_com{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-bottom:1px solid #e5e5e5;
+    text-indent: 10px;
+    font-size: 14px;
+}
+.list_com:last-child{border:0;}
