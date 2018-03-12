@@ -1,18 +1,18 @@
 <view class='Tabhref'>
-    <navigator class='Ttabcom'   open-type='navigate' url='../../pages/home/home'>
-        <image src='../../image/homeT.png' class='iocn_home'/>
+    <navigator class='Ttabcom'  url='../../pages/home/home' bindtap="active(0)">
+        <image src='{{active == 1 ? "../../image/homeF.png" : "../../image/homeF.png"}}' class='iocn_home'/>
         <view class='Ttab_title'>首页</view>
     </navigator>
-    <navigator class='Ttabcom'   open-type='navigate' url='../../pages/abouts/abouts'>
-      <image src='../../image/lookF.png' class='iocn_home'/>
+    <navigator class='Ttabcom'  url='../../pages/abouts/abouts'  bindtap="active(1)">
+      <image src='{{active == 1 ? "../../image/lookT.png" : "../../image/lookF.png"}}' class='iocn_home'/>
       <view class='Ttab_title'>咨询</view>
     </navigator>
-    <navigator class='Ttabcom'   open-type='navigate' url='../../pages/inform/inform'>
-      <image src='../../image/wF.png' class='iocn_home'/>
+    <navigator class='Ttabcom'  url='../../pages/inform/inform'  bindtap="active(2)">
+      <image src='{{active == 1 ? "../../image/wT.png" : "../../image/wF.png"}}' class='iocn_home'/>
       <view class='Ttab_title'>关于</view>
     </navigator>
-    <navigator class='Ttabcom'   open-type='navigate' url='../../pages/member/member'>
-      <image src='../../image/meF.png' class='iocn_home'/>
+    <navigator class='Ttabcom'  url='../../pages/member/member'  bindtap="active(3)">
+      <image src='{{active == 1 ? "../../image/meT.png" : "../../image/meF.png"}}' class='iocn_home'/>
       <view class='Ttab_title'>我</view>
     </navigator>
       <!-- <view class='Ttabcom' @tap='chang(0)'  >

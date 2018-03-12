@@ -1,6 +1,6 @@
 Page({
     data: {
-      activeNum: 0
+      logs: []
     },
     onLoad: function () {
       

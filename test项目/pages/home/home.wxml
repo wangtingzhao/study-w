@@ -1,9 +1,10 @@
 <!-- home.wxml -->
 <view class='Thome'>
     <view class='Theader'>
-        <image class='logo' src="../../image/bite.jpg"></image>
-        <view class='p text colorF'>比特科技</view>
-        <view class='p text colorF fs12'>电脑 闭路 笔记本 网络 打印机</view>
+        <!-- <image class='logo' src="../../image/bite.jpg"></image> -->
+        <!-- <view class='p text colorF'>比特科技</view> -->
+        <view class='p text colorF'>辣么值商城</view>
+        <!-- <view class='p text colorF fs12'>电脑 闭路 笔记本 网络 打印机</view> -->
     </view>
     <view  class='Atab'>
         <view class='com_tab'><image src="../../image/server.png"></image><view class='p text fs14'>服务流程</view></view>
@@ -20,5 +21,4 @@
     <view class='Collaborator'>
         <view class='title'> <image class='icon_coll'  src="../../image/coll.png"></image> 合作供应商</view>
     </view>
-    <tab></tab>
 </view>

@@ -1,0 +1,22 @@
+.Theader{
+    width:100%;
+    height:150px;
+    background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1520009206543&di=9eacb8af3130c3595e16c00a2c8044dd&imgtype=0&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0729%2Fd29c2e05752b67ef949af961f55575c2.jpg) no-repeat ;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.logo{
+    width: 60px;
+    height:60px;
+    border-radius: 50%;
+    margin:20px auto 0;
+    display: block;
+}
+.p{
+    line-height:1.5;
+    height:20px;
+    margin:5px 0;
+}
+.text{text-align: center;}
+.colorF{color: #fff;}
+.fs12{font-size: 12px;}

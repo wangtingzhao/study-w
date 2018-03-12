@@ -5,8 +5,40 @@
     "pages/logs/logs",
     "pages/abouts/abouts",
     "pages/inform/inform",
-    "pages/member/member"
+    "pages/member/member",
+    "pages/order/order",
+    "pages/vip/vip",
+    "pages/cart/cart",
+    "pages/address/address"
   ],
+  "tabBar":{
+    "list":[
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/image/homeF.png",
+        "selectedIconPath": "/image/homeT.png"
+      },
+      {
+        "pagePath": "pages/inform/inform",
+        "text": "资讯",
+        "iconPath": "/image/lookF.png",
+        "selectedIconPath": "/image/lookT.png"
+      },
+      {
+        "pagePath": "pages/abouts/abouts",
+        "text": "关于",
+        "iconPath": "/image/wF.png",
+        "selectedIconPath": "/image/wT.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "我",
+        "iconPath": "/image/meF.png",
+        "selectedIconPath": "/image/meT.png"
+      }
+    ]
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

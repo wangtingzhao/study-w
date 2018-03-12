@@ -7,11 +7,11 @@
         </view>
     </view>
     <view class='href_list'>
-        <navigator class='list_com' url="">我的订单</navigator>
-        <navigator class='list_com' url="">地址管理</navigator>
-        <navigator class='list_com' url="">购物车</navigator>
+        <navigator class='list_com' url="../order/order">我的订单</navigator>
+        <navigator class='list_com' url="../address/address">地址管理</navigator>
+        <navigator class='list_com' url="../cart/cart">购物车</navigator>
         <navigator class='list_com' url="">系统通知</navigator>
-        <navigator class='list_com' url="">会员卡</navigator>
+        <navigator class='list_com' url="../vip/vip">会员卡</navigator>
         <navigator class='list_com' url="">优惠券</navigator>
         <navigator class='list_com' url="">积分</navigator>
         <navigator class='list_com' url="">中奖纪录</navigator>

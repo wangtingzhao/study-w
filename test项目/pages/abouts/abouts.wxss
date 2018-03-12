@@ -1,0 +1,49 @@
+.comment{
+    width:100%;
+    background: #fff;
+}
+.comment_title{
+    width: 100%;
+    height:40px;
+    line-height: 40px;
+    font-size: 16px;
+    overflow: hidden;
+}
+.icon_box{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.icon_img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 5px auto;
+}
+.icon_num{
+    position: absolute;
+    margin:auto;
+    top:-2px;left:16px;
+    font-size: 12px;
+    /* transform: translate(-50%,-50%); */
+    text-align: center;
+    color:#fff;
+}
+.span{
+    display: inline;
+    float: left;
+}
+.text{
+    width: 95%;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto
+}
+.text input{
+    height: 100%;
+    line-height: 30px;
+    font-size: 14px;
+    text-indent: 10px;
+}

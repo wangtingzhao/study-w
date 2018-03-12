@@ -1,1 +1,19 @@
-<view class='Tabout'>关于我们</view>
+<view class='Tabout'>
+    <header></header>
+    <view class="comment">
+        <view class="comment_title">
+            <view class="icon_box">
+                <image class="icon_img" src="../../image/comment.png"></image><view class="icon_num">1</view>
+            </view>
+            <view class="span">
+                条评论
+            </view>
+        </view>
+        <view class="text">
+            <input placeholder="我也来说几句..." />
+        </view>
+        <view class="btns">
+            <input />
+        </view>
+    </view>
+</view>
