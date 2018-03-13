@@ -1,3 +1,12 @@
 <view class="order">
-    订单列表
+    <view class="o_tab">
+        <view  class="tab_content">全部</view>
+        <view class="tab_content">待付款</view>
+        <view class="tab_content">待发货</view>
+        <view class="tab_content">待收货</view>
+        <view class="tab_content">待评价</view>
+    </view>
+    <view class="order_content">
+        {{num}}
+    </view>
 </view>

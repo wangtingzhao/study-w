@@ -13,7 +13,26 @@
             <input placeholder="我也来说几句..." />
         </view>
         <view class="btns">
-            <input />
+            <view class="img_btn" bindtap="open_img"><image class="icon_img" src="../../image/ZP.png"></image>添加图片</view>
+            <view class="ok_btn" bindtap="Release">发布</view>
+        </view>
+        <view class="show_content">
+            <view class="show_c_list">
+                <view class="show_list_header">
+                    <image class="h_user_img" src="../../image/bite.jpg"></image>
+                    <view class="h_user">
+                        <view class="h_user_name">黑白</view>
+                        <view class="h_user_time">2018-3-13 21:56:59</view>
+                    </view>
+                    <view class="h_btns">
+                        <view class="h_user_reply"><image src="../../image/reply.png"></image><view class="h_user_num">回复</view></view>
+                        <view class="h_user_live"><image src="../../image/loveF.png"></image><view class="h_user_num">0</view></view>
+                    </view>
+                </view>
+                <view class="list_conent">
+                    沙发
+                </view>
+            </view>
         </view>
     </view>
 </view>

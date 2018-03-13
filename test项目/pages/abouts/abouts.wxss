@@ -25,7 +25,7 @@
 .icon_num{
     position: absolute;
     margin:auto;
-    top:-2px;left:16px;
+    top:-6px;left:14px;
     font-size: 12px;
     /* transform: translate(-50%,-50%); */
     text-align: center;
@@ -45,5 +45,75 @@
     height: 100%;
     line-height: 30px;
     font-size: 14px;
-    text-indent: 10px;
+    
+}
+.btns{
+    height: 40px;
+    font-size: 12px;
+    overflow: hidden;
+}
+.img_btn,.ok_btn{
+    height: 30px;
+    line-height: 30px;
+    margin-top:5px;
+    text-indent: 30px;
+}
+.img_btn{
+    float: left;
+}
+.ok_btn{
+    float: right;
+    text-indent: 0px;
+    width: 40px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin-right: 9px;
+}
+.icon_img{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    left:8px;
+}
+.show_content{
+    padding: 0 20px;
+}
+.show_list_header{
+    display: flex;
+    width: 100%;
+}
+.h_user_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+.h_user{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.h_user_name,.h_user_time{
+    flex: 1;
+    font-size: 12px;
+    color: #8f8f8f;
+}
+.h_user_reply,.h_user_live{
+    float: left;
+    font-size: 12px;
+}
+.h_user_reply image,.h_user_live image{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+.h_user_num{
+    display: inline-block;
+}
+.list_conent{
+    font-size: 12px;
+    padding-top: 5px;
 }
