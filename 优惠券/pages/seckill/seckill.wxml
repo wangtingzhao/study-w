@@ -1,0 +1,4 @@
+<!-- seckill.wxml -->
+<view class='seckill'>
+    秒杀
+</view>

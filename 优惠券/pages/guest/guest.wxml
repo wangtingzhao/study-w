@@ -1,0 +1,4 @@
+<!-- guest.wxml -->
+<view class='guest'>
+    新客
+</view>

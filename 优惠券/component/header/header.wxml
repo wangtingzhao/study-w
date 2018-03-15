@@ -1,0 +1,6 @@
+<view class='Theader'>
+    <!-- <image class='logo' src="../../image/bite.jpg"></image> 
+    <view class='p text colorF'>比特科技</view>
+    <view class='p text colorF fs12'>电脑 闭路 笔记本 网络 打印机</view> -->
+    <view class='p text colorF'>辣么值商城</view>
+</view>

@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/member/member",
+    "pages/goods/goods",
+    "pages/search/search",
+    "pages/guest/guest",
+    "pages/explain/explain",
+    "pages/partner/partner",
+    "pages/service/service",
+    "pages/seckill/seckill" 
+  ],
+  "tabBar":{
+    "list":[
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/image/homeF.png",
+        "selectedIconPath": "/image/homeT.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "/image/lookF.png",
+        "selectedIconPath": "/image/lookT.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "排行榜",
+        "iconPath": "/image/wF.png",
+        "selectedIconPath": "/image/wT.png"
+      },
+      {
+        "pagePath": "pages/seckill/seckill",
+        "text": "咚咚抢",
+        "iconPath": "/image/wF.png",
+        "selectedIconPath": "/image/wT.png"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "我",
+        "iconPath": "/image/meF.png",
+        "selectedIconPath": "/image/meT.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  } 
+}

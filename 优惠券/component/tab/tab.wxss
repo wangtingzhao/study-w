@@ -1,0 +1,24 @@
+.Tabhref{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+  }
+   .Ttabcom{
+      flex: 1;
+   }
+   .iocn_home{
+     width: 20px;
+     height: 20px;
+     margin: 5px auto;
+     display: block;
+     /* background: url(../image/homeT.png) no-repeat;
+     background-size: 100% 100%; */
+   }
+   .Ttab_title{
+     font-size: 14px;
+     text-align: center;
+   }

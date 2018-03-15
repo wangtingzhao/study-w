@@ -9,4 +9,5 @@
     <view class="order_content">
         {{num}}
     </view>
+    <button bindtap="fz">复制</button>
 </view>

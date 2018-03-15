@@ -1,0 +1,4 @@
+<!-- search.wxml -->
+<view class='search'>
+    搜索
+</view>

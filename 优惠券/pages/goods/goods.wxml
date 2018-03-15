@@ -1,0 +1,4 @@
+<!-- goods.wxml -->
+<view class='goods'>
+    商品详情
+</view>
