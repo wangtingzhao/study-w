@@ -13,36 +13,38 @@
     "pages/seckill/seckill" 
   ],
   "tabBar":{
+    "color": "#8a8a8a",
+    "selectedColor": "#ff98b1",
     "list":[
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "/image/homeF.png",
-        "selectedIconPath": "/image/homeT.png"
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home_active.png"
       },
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "/image/lookF.png",
-        "selectedIconPath": "/image/lookT.png"
+        "iconPath": "/image/search.png",
+        "selectedIconPath": "/image/search_active.png"
       },
       {
         "pagePath": "pages/service/service",
         "text": "排行榜",
-        "iconPath": "/image/wF.png",
-        "selectedIconPath": "/image/wT.png"
+        "iconPath": "/image/ranking.png",
+        "selectedIconPath": "/image/ranking_active.png"
       },
       {
         "pagePath": "pages/seckill/seckill",
         "text": "咚咚抢",
-        "iconPath": "/image/wF.png",
-        "selectedIconPath": "/image/wT.png"
+        "iconPath": "/image/seckill.png",
+        "selectedIconPath": "/image/seckill_active.png"
       },
       {
         "pagePath": "pages/member/member",
         "text": "我",
-        "iconPath": "/image/meF.png",
-        "selectedIconPath": "/image/meT.png"
+        "iconPath": "/image/member.png",
+        "selectedIconPath": "/image/member_active.png"
       }
     ]
   },

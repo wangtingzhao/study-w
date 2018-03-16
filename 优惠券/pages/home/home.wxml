@@ -1,4 +1,53 @@
 <!-- home.wxml -->
 <view class='home'>
-    搜索
+    <!-- <view class="box {{ activeNum == 1 ? 'bg' : ''}}"></view>
+    <button bindtap="box">变换</button> -->
+    <view class="home_fixed">
+        <navigator class="gosearch safter" url=""><image class="search_img" src="../../image/search_bg.png"></image></navigator>
+        <view>
+            <scroll-view scroll-x="true"  style="display:flex;white-space: nowrap;font-size:14px;">
+                <block wx:for="{{title_list}}">
+                    <view  style="width:60px;height:40px;line-height:40px;text-align:center;display:inline-block;">{{item}}</view>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="home_content">
+        <swiper  autoplay="true"  interval="3500" duration="500" circular="true" >
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image class="url_img" src="{{item}}" class="slider-image" width="750rpx" height="350rpx"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="cate_btn">
+           <block wx:for="{{cate_list}}"> <navigator class="cate_child" url=""><image class="cate_img" src="{{item.img}}"></image><view class="cate_title">{{item.title}}</view></navigator></block>
+        </view>
+        <view class="seckill">
+            <view class="seckill_title">
+                <view class="seckill_left"><image class="seckill_img" src="../../image/seckill_time.png"></image>限时秒杀</view>
+                <view class="seckill_time">13:00</view>
+                <view class="seckill_right">爆款好货天天抢<image class="Simg_right" src="../../image/seckill_right.png"></image></view>
+            </view>
+            <scroll-view scroll-x="true"  style="display:flex;white-space: nowrap;font-size:14px;padding-top:10px;">
+                <block wx:for="{{seckill_goods}}">
+                    <navigator url="" style="width:130px;display:inline-block;margin-left:10px;">
+                        <image class="goods_img" src="{{item.img}}"></image>
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">¥{{item.price}}<view class="price_title">券后</view></view>
+                    </navigator>
+                </block>
+            </scroll-view>
+        </view>
+        <view class="goods_list">
+            <block wx:for="{{items}}">
+                <navigator url="" class="goods_child">
+                    <image src=""></image>
+                    <view class="goods_name"></view>
+                    <view class=""></view>
+                    <view class="goods_price"><view>¥ <view style="font-size:14px;"></view><view class="price_title">券后</view></view><view class="sales"></view></view>
+                </navigator>
+            </block>
+        </view>
+    </view>
 </view>

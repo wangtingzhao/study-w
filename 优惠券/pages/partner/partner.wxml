@@ -1,4 +1,4 @@
-<!-- home.wxml -->
-<view class='home'>
+<!-- partner.wxml -->
+<view class='partner'>
     合伙人
 </view>
