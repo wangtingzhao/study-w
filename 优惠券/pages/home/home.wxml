@@ -29,23 +29,23 @@
                 <view class="seckill_time">13:00</view>
                 <view class="seckill_right">爆款好货天天抢<image class="Simg_right" src="../../image/seckill_right.png"></image></view>
             </view>
-            <scroll-view scroll-x="true"  style="display:flex;white-space: nowrap;font-size:14px;padding-top:10px;">
+            <scroll-view scroll-x="true"  style="display:flex;white-space: nowrap;font-size:30rpx;padding-top:10px;">
                 <block wx:for="{{seckill_goods}}">
-                    <navigator url="" style="width:130px;display:inline-block;margin-left:10px;">
+                    <navigator url="" style="width:130px;display:inline-block;margin-left:10px;background:#fff;">
                         <image class="goods_img" src="{{item.img}}"></image>
                         <view class="goods_name">{{item.goods_name}}</view>
-                        <view class="goods_price">¥{{item.price}}<view class="price_title">券后</view></view>
+                        <view class="goods_price">¥<view style="font-size:35rpx;display:inline-block;">{{item.price}}</view><view class="price_title">券后</view></view>
                     </navigator>
                 </block>
             </scroll-view>
         </view>
         <view class="goods_list">
-            <block wx:for="{{items}}">
-                <navigator url="" class="goods_child">
-                    <image src=""></image>
-                    <view class="goods_name"></view>
-                    <view class=""></view>
-                    <view class="goods_price"><view>¥ <view style="font-size:14px;"></view><view class="price_title">券后</view></view><view class="sales"></view></view>
+            <block wx:for="{{goods_list}}">
+                <navigator url="{{item.goods_id}}" hover-class="none" class="goods_child">
+                    <image mode="scaleToFill" class="goods_imgs" src="{{item.img}}"></image>
+                    <view class="goods_name fs12">{{item.goods_name}}</view>
+                    <view class="goods_price"><view style="display:inline-block;margin-left:5px;">¥<view style="font-size:14px;display:inline-block;">{{item.price}}</view><view class="price_title fs12">券后</view></view><view class="sales">月销量10999</view></view>
+                    <!-- <view class="share_btn">分享</view> -->
                 </navigator>
             </block>
         </view>
