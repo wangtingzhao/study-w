@@ -11,12 +11,18 @@
                 </block>
             </scroll-view>
         </view>
+        <view class="tab_btns {{ scrollNum >= 300 ? '' : 'none' }}" bindscroll='onPageScroll'  >
+            <view class="tab_com">精选</view>
+            <view class="tab_com">销量</view>
+            <view class="tab_com">最新</view>
+            <view class="tab_com">价格</view>
+        </view>
     </view>
     <view class="home_content">
-        <swiper  autoplay="true"  interval="3500" duration="500" circular="true" >
+        <swiper  autoplay="true"  interval="3500" duration="500" circular="true" style="height:400rpx;" >
             <block wx:for="{{imgUrls}}">
                 <swiper-item>
-                    <image class="url_img" src="{{item}}" class="slider-image" width="750rpx" height="350rpx"/>
+                    <image class="url_img" src="{{item}}" />
                 </swiper-item>
             </block>
         </swiper>
@@ -25,29 +31,37 @@
         </view>
         <view class="seckill">
             <view class="seckill_title">
-                <view class="seckill_left"><image class="seckill_img" src="../../image/seckill_time.png"></image>限时秒杀</view>
-                <view class="seckill_time">13:00</view>
-                <view class="seckill_right">爆款好货天天抢<image class="Simg_right" src="../../image/seckill_right.png"></image></view>
+                <view class="seckill_left fs12"><image class="seckill_img" src="../../image/seckill_time.png"></image>限时秒杀</view>
+                <view class="seckill_time fs12">13:00</view>
+                <view class="seckill_right fs12">爆款好货天天抢<image class="Simg_right" src="../../image/seckill_right.png"></image></view>
             </view>
             <scroll-view scroll-x="true"  style="display:flex;white-space: nowrap;font-size:30rpx;padding-top:10px;">
                 <block wx:for="{{seckill_goods}}">
-                    <navigator url="" style="width:130px;display:inline-block;margin-left:10px;background:#fff;">
+                    <navigator url="" style="width:320rpx;display:inline-block;margin-left:10px;background:#fff;">
                         <image class="goods_img" src="{{item.img}}"></image>
-                        <view class="goods_name">{{item.goods_name}}</view>
-                        <view class="goods_price">¥<view style="font-size:35rpx;display:inline-block;">{{item.price}}</view><view class="price_title">券后</view></view>
+                        <view class="goods_name fs12">{{item.goods_name}}</view>
+                        <view class="goods_price fs12">
+                            <view style="display:inline-block;margin-left:5px;">
+                                ¥<view style="font-size:35rpx;display:inline-block;">{{item.price}}</view><view class="price_title fs12">券后</view>
+                            </view>
+                            <view class="sales fs12">月销量10999</view>
+                        </view>
                     </navigator>
                 </block>
             </scroll-view>
         </view>
-        <view class="goods_list">
-            <block wx:for="{{goods_list}}">
-                <navigator url="{{item.goods_id}}" hover-class="none" class="goods_child">
-                    <image mode="scaleToFill" class="goods_imgs" src="{{item.img}}"></image>
-                    <view class="goods_name fs12">{{item.goods_name}}</view>
-                    <view class="goods_price"><view style="display:inline-block;margin-left:5px;">¥<view style="font-size:14px;display:inline-block;">{{item.price}}</view><view class="price_title fs12">券后</view></view><view class="sales">月销量10999</view></view>
-                    <!-- <view class="share_btn">分享</view> -->
-                </navigator>
-            </block>
+        <view class="goods" bindtap="onReachBottom">
+            <view class="goods_list" >
+                <block wx:for="{{goods_list}}">
+                    <navigator url="{{item.goods_id}}" hover-class="none" class="goods_child">
+                        <image mode="scaleToFill" class="goods_imgs" src="{{item.img}}"></image>
+                        <view class="goods_name fs12">{{item.goods_name}}</view>
+                        <view class="goods_price fs12"><view style="display:inline-block;margin-left:5px;">¥<view style="font-size:35rpx;display:inline-block;">{{item.price}}</view><view class="price_title fs12">券后</view></view><view class="sales fs12">月销量10999</view></view>
+                        <!-- <view class="share_btn">分享</view> -->
+                    </navigator>
+                </block>
+            </view>
         </view>
     </view>
-</view>
+    <view class="top0 {{ scrollNum <= 500 ? 'none' : '' }}" bindtap="scrollTopone"><image src="../../image/top.png"></image></view>
+</view> 

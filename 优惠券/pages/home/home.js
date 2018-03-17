@@ -52,15 +52,61 @@ Page({
         {"img":"https://img.alicdn.com/bao/uploaded/i3/1098586561/TB2iaantVXXXXXhXpXXXXXXXXXX_!!1098586561.jpg_q50.jpg","goods_name":"金稻 超声波充电洁面仪 深层清洁","goods_id":"1","price":'15'},
         {"img":"https://img.alicdn.com/bao/uploaded/i3/1098586561/TB2iaantVXXXXXhXpXXXXXXXXXX_!!1098586561.jpg_q50.jpg","goods_name":"丝话颜语 水嫩光泽面膜组合5片装","goods_id":"1","price":'15'},
         {"img":"https://img.alicdn.com/bao/uploaded/i3/1098586561/TB2iaantVXXXXXhXpXXXXXXXXXX_!!1098586561.jpg_q50.jpg","goods_name":"丝话颜语 海洋红藻保湿蚕丝面膜5片/盒","goods_id":"1","price":'15'}
-      ]
+      ],
+      scrollNum:0,
     },
     onLoad: function () {
-      
-    },
+        // console.log(window.scrollTop)
+    },  
     box: function() {
         this.setData({
           activeNum:1
         })
         console.log(this.data.activeNum)
+    },
+    onPageScroll:function(e){ // 获取滚动条当前位置
+      this.setData({
+        scrollNum: e.scrollTop
+      })
+      console.log(e.scrollTop);
+    },
+    onReachBottom: function () {  
+      console.log(444)
+      /* var that = this;  
+      // 显示加载图标  
+      wx.showLoading({  
+        title: '玩命加载中',  
+      })  
+      // 页数+1  
+      page = page + 1;  
+      wx.request({  
+        url: 'https://xxx/?page=' + page,  
+        method: "GET",  
+        // 请求头部  
+        header: {  
+          'content-type': 'application/text'  
+        },  
+        success: function (res) {  
+          // 回调函数  
+          var moment_list = that.data.moment;  
+    
+          for (var i = 0; i < res.data.data.length; i++) {  
+            moment_list.push(res.data.data[i]);  
+          }  
+          // 设置数据  
+          that.setData({  
+            moment: that.data.moment  
+          })  
+          // 隐藏加载框  
+          wx.hideLoading();  
+        }  
+      })  */
+      
+    },
+    scrollTopone:function(){
+      wx.pageScrollTo({
+        scrollTop: 0,
+        duration: 300
+      })
     }
   })

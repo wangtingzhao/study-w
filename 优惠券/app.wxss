@@ -1,4 +1,7 @@
 /**app.wxss**/
+Page{
+background: #f8f8f8;
+}
 .container {
   height: 100%;
   display: flex;
@@ -10,4 +13,26 @@
 } 
 .fs12{
   font-size: 30rpx;
+}
+.fs10{
+  font-size: 25rpx;
+}
+.none{
+  display: none!important;
+}
+.top0{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom:90px;
+  right:20px;
+}
+.top0 image{
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 10px auto;
 }

@@ -11,6 +11,8 @@
 }
 .url_img{
     width:100%;
+    height:100%;
+    display: block;
 }
 .gosearch{
     width: 100%;
@@ -25,7 +27,7 @@
     width: 90%;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    /* font-size: 12px; */
     color:#fff;
     background: rgba(255,255,255,0.5);
     border-radius: 2.5px;
@@ -62,13 +64,14 @@
 .cate_btn{
     width: 100%;
     overflow: hidden;
-    padding: 10px 0;
+    background: #fff;
+    border-bottom:8px solid #f5f5f5;
 }
 .cate_child{
     width: 20%;
     height:50px;
     float: left;
-    padding: 3px 0;
+    padding: 10px 0;
 }
 .cate_img{
     width: 30px;
@@ -77,23 +80,30 @@
     margin: 0 auto;
 }
 .cate_title{
-    font-size: 12px;
+    font-size: 28rpx;
     color:#606060;
     text-align: center;
+    margin-top: 5px;
+}
+.seckill{
+    background: #fff;
+    border-bottom:8px solid #f5f5f5;
 }
 .seckill_title{
-    font-size: 12px;
     color:#e9302d;
     display: flex;
-    height: 20px;
-    line-height: 20px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 10px;
 }
 .seckill_time{
+    height: 20px;
+    line-height: 20px;
     padding: 0 5px;
     color:#fff;
     background: #222;
     border-radius: 2.5px;
+    margin-top: 10px;
 }
 .seckill_img,.Simg_right{
     width: 15px;
@@ -101,7 +111,7 @@
     vertical-align: middle;
 }
 .seckill_left{
-    width: 75px;
+    width: 170rpx;
 }
 .seckill_right{
     flex: 1;
@@ -111,8 +121,8 @@
     margin-left: 10px;
 }
 .goods_img{
-    width: 130px;
-    height: 130px;
+    width: 320rpx;
+    height: 320rpx;
 }
 .goods_name{
     overflow: hidden;
@@ -123,7 +133,7 @@
     text-indent: 4px;
 }
 .goods_price{
-    font-size:12px;
+    /* font-size:12px; */
     color: #e9302d;
 }
 .price_title{
@@ -132,7 +142,7 @@
     margin-left: 5px;
 }
 .goods_list{
-    padding:0 16px;
+    padding:16px 16px 0;
 }
 .goods_child{
     width: 48%;
@@ -152,20 +162,30 @@
 .sales{
     display: inline-block;
     float: right;
-    margin-right: 5px;
+    margin: 4px 5px 0 0;
 }
 .share_btn{
     width: 90%;
     height: 30px;
     line-height: 30px;
-    font-size: 14px;
+    /* font-size: 14px; */
     text-align: center;
     color: #fff;
     background: #e9302d;
     margin: 5px auto;
     border-radius: 5px;
 }
-page {
-    background: #f8f8f8;
+.tab_btns{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.tab_com{
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    text-align: center; 
+    border-bottom: 1px solid #f1f1f1;
 }
 /* 红色fb2928 */
