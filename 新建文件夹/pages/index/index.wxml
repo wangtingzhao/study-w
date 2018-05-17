@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <swiper style="width: 100%;height: 100%;" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="true" >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="mark" style="width: 100%;height: 300px;" current-item-id='{{key}}'>
+        <view class="mark" style="width: 100%;height: 100%; position: relative;" >
+            <video id="myVideo"  src="" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <button bindtap="changeIndicatorDots"> indicator-dots </button> -->
+  <!-- <button bindtap="changeAutoplay"> autoplay </button>
+  <slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+  <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration -->
+</view>
