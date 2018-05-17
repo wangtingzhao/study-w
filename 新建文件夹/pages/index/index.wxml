@@ -11,9 +11,9 @@
     <text class="user-motto">{{motto}}</text>
   </view> -->
   <swiper style="width: 100%;height: 100%;" indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="true" >
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="true" bindchange='bindchanges' >
     <block wx:for="{{imgUrls}}">
-      <swiper-item class="mark" style="width: 100%;height: 300px;" current-item-id='{{key}}'>
+      <swiper-item class="mark" style="width: 100%;height: 300px;" >
         <view class="mark" style="width: 100%;height: 100%; position: relative;" >
             <video id="myVideo"  src="" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
         </view>

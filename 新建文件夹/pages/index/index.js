@@ -21,7 +21,9 @@ Page({
     duration: 0,
     number: 0
   },
-  onSlideChangeEnd:function(swiper){ alert(swiper.activeIndex); },
+  bindchanges:function(e){ 
+      console.log(e);
+   },
   changeIndicatorDots: function(e) {
     console.log(e);
   },
