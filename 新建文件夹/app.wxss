@@ -1,33 +1,25 @@
 /**app.wxss**/
-page{
+page, .container,.swipers{
   height: 100%;
 }
-.container {
-  height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box; */
-} 
-swiper-item {
+.container .swiperItem,.video_box{
   width: 100%;
-  height: 300px!important;
+  height: 200px!important;
   position: relative;
 }
-swiper-item #myVideo{
-  width: 100%;
+.container .swipers{
   height: 100%;
 }
-.mark:after{
-  content: "";
-  display: block;
+.video{
+  width: 80%;
+  height: 100%;
+}
+.container .mark{
   position: absolute;
   top:0;
   left:0;
   bottom:0;
   right:0;
   background: rgba(0,0,0,0.5);
-  z-index:1000;
+  z-index:99999;
 }

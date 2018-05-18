@@ -19,7 +19,7 @@
         </view>
     </view>
     <view class="home_content">
-        <swiper  autoplay="true"  interval="3500" duration="500" circular="true" style="height:400rpx;" >
+        <swiper  autoplay="false"  interval="3500" duration="200" circular="true" style="height:400rpx;" >
             <block wx:for="{{imgUrls}}">
                 <swiper-item>
                     <image class="url_img" src="{{item}}" />
