@@ -8,12 +8,11 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    a: 0,
     imgUrls: [
-      'blob:http://player.youku.com/903aeec7-6a1e-4d43-af44-e310396b8510',
-      'blob:http://player.youku.com/903aeec7-6a1e-4d43-af44-e310396b8510',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-      'blob:http://player.youku.com/903aeec7-6a1e-4d43-af44-e310396b8510',
-      'blob:http://player.youku.com/903aeec7-6a1e-4d43-af44-e310396b8510'
+      {numbers:true,url:'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'},
+      {numbers:false,url:'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'},
+      {numbers:false,url:'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'}
     ],
     indicatorDots: false,
     autoplay: false,
@@ -22,7 +21,11 @@ Page({
     number: 0
   },
   bindchanges:function(e){ 
-      console.log(e);
+    var _index = e.detail.current;
+    console.log(_index);
+    this.setData({
+      a: _index
+    })
    },
   changeIndicatorDots: function(e) {
     console.log(e);

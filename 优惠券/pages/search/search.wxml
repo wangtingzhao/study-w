@@ -1,4 +1,8 @@
 <!-- search.wxml -->
 <view class='search'>
-    搜索
+    <view class="search_input_box">
+        <input class="search_input"   placeholder="输入关键词或粘贴淘宝/天猫商品标题" />
+        <!-- <image class="icon_search" src="../../image/searcg.png"></image> -->
+        <view class="search_btn">搜索</view>
+    </view>
 </view>
