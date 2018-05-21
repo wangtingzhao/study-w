@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   
-  <!-- <swiper class="swipers" autoplay="{{autoplay}}"   style='height: 100%;' display-multiple-items='3'  vertical="true"  bindchange='bindchanges' >
+  <!-- <swiper class="swipers" autoplay="{{autoplay}}"   style='height: 100%;' display-multiple-items='3'  vertical="true"  bindchange='videoPlays' >
       <block wx:for="{{imgUrls1}}">
         <swiper-item class="swiperItem" >
           <view class=" {{ index == a ? '' : 'mark' }}"></view>
@@ -10,15 +10,27 @@
       </block>
   </swiper> -->
 
-  <swiper class="swipers" autoplay="{{autoplay}}"   style='height: 100%;' circular='{{circular}}' display-multiple-items='3' vertical="true" bindchange='bindchanges' >
+  <swiper class="swipers" autoplay="{{autoplay}}"   style='height: 100%;' circular='{{circular}}' display-multiple-items='3' vertical="true" bindchange='videoPlays' >
       <block wx:for="{{imgUrls}}">
-        <swiper-item class="swiperItem" >
-          <view class="video_box">
-            <view class=" {{index == a ? '' : 'mark' }}"></view>
-              <video wx:if='{{index == a}}' class="video " src="{{item.url}}"></video>
-              <image wx:else src="{{item.imgurl}}"></image>
+        <swiper-item class="swiperItem">
+          <view class="video_box" id="index{{index + 1}}" >
+              <video class="video " autoplay="{{ index == a }}" src="{{item.url}}" poster='{{item.imgurl}}' ></video>
           </view>
         </swiper-item>
       </block>
   </swiper>
+  <!-- <video src="http://qnvideo.ixiaochuan.cn/zyvd/ab/fd/de08-7cba-11e7-ab70-00163e05e6f5" autoplay="{{video1}}" ></video>
+  <video src="http://qnvideo.ixiaochuan.cn/zyvd/e3/ec/dff1-c5b9-11e7-86e0-00163e02acff" autoplay="{{video2}}" ></video>
+  <button bindtap="tabautoPlay">按钮</button> -->
+  <!-- <view wx:for="{{ autiplays }}">
+      <view>
+         <video id="index{{ index }}" src="{{ item.url }}" wx:if="{{playIndex == index}}"></video>
+      </view>
+  
+      <view id="{{ index }}" class="cover" style="display: {{ playIndex == index ? 'none' : 'block' }};" bindtap="videoPlay">
+        <image class="coverImg" src="{{ item.imgurl }}" mode="scaleToFill">
+           <image class="playImg" src="../../images/video/play.png" mode="scaleToFill"></image>
+        </image>
+      </view>
+  </view> -->
 </view>

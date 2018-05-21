@@ -5,8 +5,8 @@ page, .container,.swipers{
 .container .swiperItem,.video_box{
   width: 100%;
   height: 200px!important;
-  position: relative;
 }
+.pr{ position: relative; }
 .container .swipers{
   height: 100%;
 }
