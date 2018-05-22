@@ -5,6 +5,7 @@
     background: #fff;   
     padding: 0 10px;
     overflow: hidden;
+    border-bottom: 1px solid #f4f4f4;
 }
 .search_input{
     width: 78%;
@@ -36,4 +37,20 @@
     right: 10px;
     top:5px;
     border-radius: 2.5px;
+}
+.search_history,.hot_search {
+    font-size: 14px;
+    background: #fff;
+    padding: 10px;
+}
+.history_title,.hot_title{
+    color: #bdbdbd;
+    padding-bottom: 10px;
+}
+.span_btn{
+    display:inline-block;
+    padding: 5px;
+    background: #f8f8f8;
+    border-radius: 2.5px;
+    margin: 0 10px 10px 0;
 }

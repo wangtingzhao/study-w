@@ -27,6 +27,10 @@ Page({
     ],
     autiplays: [
       {imgurl:'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7a/d8/6164-b8b9-11e7-a638-00163e064d23'},
+      {imgurl:'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7d/81/5461-b8b9-11e7-ae41-00163e056771'},
+      {imgurl:'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7a/d8/6164-b8b9-11e7-a638-00163e064d23'},
+      {imgurl:'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7d/81/5461-b8b9-11e7-ae41-00163e056771'},
+      {imgurl:'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7a/d8/6164-b8b9-11e7-a638-00163e064d23'},
       {imgurl:'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',numbers:false,url:'http://qnvideo.ixiaochuan.cn/zyvd/7d/81/5461-b8b9-11e7-ae41-00163e056771'}
     ],
     indicatorDots: false,
@@ -38,7 +42,8 @@ Page({
     number: 0,
     video1: false,
     video2: false,
-    playIndex: 1
+    playIndex: null,
+    Accelerometer: ''
   },
   bindchanges:function(e){ 
     var _index = e.detail.current;
@@ -76,11 +81,19 @@ Page({
     function fnPlay() {
         var videoContext = wx.createVideoContext('index' + that.data.playIndex)
         videoContext.play()
+        wx.onCompassChange(function (res) {
+          if(Math.floor(res.direction)>290){
+            videoContext.requestFullScreen();
+          }else{
+            videoContext.exitFullScreen();
+          }
+          console.log(res.direction)
+        })
     }
   },
   videoPlays: function (e) {
     console.log(e);
-    var length = this.data.imgUrls.length
+    var length = this.data.autiplays.length
     var id = e.detail.current  
     console.log(this.data.playIndex, id) // 当前播放与当前点击
     if (!this.data.playIndex) { // 没有播放时播放视频
@@ -90,6 +103,14 @@ Page({
       })
       var videoContext = wx.createVideoContext('index'+id)
       videoContext.play()
+      wx.onCompassChange(function (res) {
+        if(Math.floor(res.direction)>290){
+          videoContext.requestFullScreen();
+        }else{
+          videoContext.exitFullScreen();
+        }
+        console.log(res.direction)
+      })
     } else {   
       console.log('有')                 // 有播放时先将prev暂停到0s，再播放当前点击的current
       var videoContextPrev = wx.createVideoContext('index' +this.data.playIndex)
@@ -99,8 +120,18 @@ Page({
       this.setData({
         playIndex: id
       })
+      console.log(this.data.playIndex);
       var videoContextCurrent = wx.createVideoContext('index' +this.data.playIndex)
       videoContextCurrent.play()
+      wx.onCompassChange(function (res) {
+        if(Math.floor(res.direction)>290 || Math.floor(res.direction)<=80 || Math.floor(res.direction)>100 ){
+          videoContext.requestFullScreen();
+        }else{
+          videoContext.exitFullScreen();
+        }
+        console.log(res.direction)
+      })
+      console.log(videoContextCurrent.play());
     }
   },
   tabautoPlay:function() {
@@ -116,6 +147,7 @@ Page({
     })
   },
   onLoad: function () {
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

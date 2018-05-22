@@ -5,4 +5,30 @@
         <!-- <image class="icon_search" src="../../image/searcg.png"></image> -->
         <view class="search_btn">搜索</view>
     </view>
+    <view class="search_history">
+        <view class="history_title">历史搜索</view>
+        <view class="searchH_list">
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑电</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑电</view>
+        </view>
+    </view>
+    <view class="hot_search">
+        <view class="hot_title">热门搜索</view>
+        <view class="hot_list">
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑电</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑</view>
+            <view class="span_btn">电脑电脑</view>
+            <view class="span_btn">电脑电</view>
+        </view>
+    </view>
 </view>
