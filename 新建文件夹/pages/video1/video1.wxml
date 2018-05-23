@@ -1,0 +1,14 @@
+<view  class="container">
+    <!-- 横屏播放 -->
+    <view wx:for="{{ autiplays }}">
+        <view>
+           <video id="index{{ index }}_{{index+1}}" direction='{{direction}}' src="{{ item.url }}" wx:if="{{playIndex == index}}" bindended='bindended'></video>
+        </view>
+    
+        <view id="{{ index }}" class="cover"  style="display: {{ playIndex == index ? 'none' : 'block' }};" bindtap="videoPlay">
+          <image class="coverImg" src="{{ item.imgurl }}" mode="scaleToFill">
+             <!-- <image class="playImg" src="../../images/video/play.png" mode="scaleToFill"></image> -->
+          </image>
+        </view>
+    </view>
+</view>

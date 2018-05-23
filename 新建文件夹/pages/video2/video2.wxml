@@ -1,0 +1,13 @@
+<view class="container">
+    <view wx:for="{{ autiplays }}">
+        <view>
+            <video id="index{{index}} {{index+1}}" src="{{ item.url }}" wx:if="{{playIndex == index}}" bindended='bindended'></video>
+        </view>
+    
+        <view id="{{ index }}" class="cover" style="display: {{ playIndex == index ? 'none' : 'block' }};" bindtap="videoPlays">
+            <image class="coverImg" src="{{ item.imgurl }}" mode="scaleToFill">
+                <!-- <image class="playImg" src="../../images/video/play.png" mode="scaleToFill"></image> -->
+            </image>
+        </view>
+    </view>
+</view>
