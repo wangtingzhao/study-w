@@ -1,0 +1,11 @@
+<view  class="container">
+    <!-- 滚动 -->
+   <swiper autoplay="{{autoplay}}"   style='height: 100%;' display-multiple-items='3'  vertical="true"  bindchange='videoPlays' >
+      <block wx:for="{{autiplays}}">
+        <swiper-item class="swiperItem" class="{{index}}" >
+            <video src="{{item.url}}" id="index{{index}}_{{index+1}}" wx:if='{{playIndex == index}}' bindended='bindended'></video>
+          <image src="{{item.imgurl}}" class="slide-image"style='width: 100%;height:100%;'/>
+        </swiper-item>
+      </block>
+  </swiper>
+</view>
